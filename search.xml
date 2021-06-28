@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/05/20/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>测试</title>
+    <url>/2021/06/28/test/</url>
+    <content><![CDATA[<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>测试</p>
 ]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+      </tags>
   </entry>
   <entry>
     <title>原型设计工具比较及实践</title>
@@ -25,15 +19,15 @@
 <span id="more"></span>
 
 <p>它最基本的含义：原型是设计想法的表达。原型让设计师们得以展现他们的设计，以及模拟真实的使用场景。在数字化的背景下，原型能够模拟用户与界面之间的最终交互行为。根据产品团队的需求，原型可以模拟整个app或仅单个交互行为。原型可以模拟最终产品的运作方式。它支持产品团队测试其设计的可用性和可行性。也有很多人将原型与草图，线框图和模型混淆，实际上它们不同于原型。“交互性”这个概念是原型的根本，因此这就是为什么草图，线框图和模型不能被视为“原型”的理由。</p>
-<h2 id="常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点"><a href="#常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点" class="headerlink" title="常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点"></a>常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点</h2><h3 id="1-墨刀"><a href="#1-墨刀" class="headerlink" title="1. 墨刀"></a>1. <strong><a href="modao.cc">墨刀</a></strong></h3><p><u>墨刀</u>是一款在线原型设计与协同工具，借助墨刀，产品经理、设计师、开发、销售、运营及创业者等用户群体，能够搭建为产品原型，演示项目效果。墨刀同时也是协作平台，项目成员可以协作编辑、审阅，不管是产品想法展示，还是向客户收集产品反馈，向投资人进行Demo展示，或是在团队内部协作沟通、项目管理。</p>
+<h2 id="常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点"><a href="#常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点" class="headerlink" title="常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点"></a>常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点</h2><h3 id="1-墨刀"><a href="#1-墨刀" class="headerlink" title="1. 墨刀"></a>1. <strong><a href="modao.cc">墨刀</a></strong></h3><p><code>&lt;u&gt;</code>墨刀<code>&lt;/u&gt;</code>是一款在线原型设计与协同工具，借助墨刀，产品经理、设计师、开发、销售、运营及创业者等用户群体，能够搭建为产品原型，演示项目效果。墨刀同时也是协作平台，项目成员可以协作编辑、审阅，不管是产品想法展示，还是向客户收集产品反馈，向投资人进行Demo展示，或是在团队内部协作沟通、项目管理。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">优点：</span><br><span class="line">    内置丰富原型组件及页面的素材模式，支持超链接、设置字体</span><br><span class="line">    高度仿真，可快速测试UI元素和交互</span><br><span class="line">    无需开发，获取用户产品体验反馈</span><br><span class="line">    手机直接演示产品交互，感觉更直观</span><br><span class="line">    一键分享项目并选择能见页面和成员</span><br><span class="line">缺点：</span><br><span class="line">    必须在线使用，无法离线编辑和保存</span><br><span class="line">    免费版项目数量和页面数量有限（免费版最多可建3个项目，每个项目最多可以新建20个页面）</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://i.loli.net/2021/05/30/h6swpqFbyovedLa.png" alt="墨刀"></p>
-<h3 id="2-Axure"><a href="#2-Axure" class="headerlink" title="2. Axure"></a>2. <strong><a href="https://www.axure.com/">Axure</a></strong></h3><p><u>Axure</u>是美国Axure Software Solution公司旗舰产品，是一个专业的快速原型设计工具，让负责定义需求和规格、设计功能和界面的专家能够快速创建应用软件或Web网站的线框图、流程图、原型和规格说明文档。作为专业的原型设计工具，它能快速、高效的创建原型，同时支持多人协作设计和版本控制管理。<br>Axure RP的使用者主要包括商业分析师、信息架构师、产品经理、IT咨询师、用户体验设计师、交互设计师、UI设计师等，另外，架构师、程序员也在使用Axure。</p>
+<h3 id="2-Axure"><a href="#2-Axure" class="headerlink" title="2. Axure"></a>2. <strong><a href="https://www.axure.com/">Axure</a></strong></h3><p><code>&lt;u&gt;</code>Axure<code>&lt;/u&gt;</code>是美国Axure Software Solution公司旗舰产品，是一个专业的快速原型设计工具，让负责定义需求和规格、设计功能和界面的专家能够快速创建应用软件或Web网站的线框图、流程图、原型和规格说明文档。作为专业的原型设计工具，它能快速、高效的创建原型，同时支持多人协作设计和版本控制管理。<br>Axure RP的使用者主要包括商业分析师、信息架构师、产品经理、IT咨询师、用户体验设计师、交互设计师、UI设计师等，另外，架构师、程序员也在使用Axure。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">优点：</span><br><span class="line">    老牌原型设计工具，功能齐全，交互好，可实现任何常见的交互效果</span><br><span class="line">    项目共享，团队间同步工作，并保留工作历史</span><br><span class="line">    拥有强大的编辑功能，可自行制作素材库</span><br><span class="line">缺点：</span><br><span class="line">    功能太多，上手难度高</span><br><span class="line">    素材来源多为第三方，寻找不便</span><br><span class="line">    价格高，个人版每月 $29</span><br><span class="line">    软件为英文，需要英语好或者寻找汉化方法</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://i.loli.net/2021/05/30/B5ir2RnGYJzqoQs.png" alt="Axure"></p>
-<h3 id="3-Mockplus"><a href="#3-Mockplus" class="headerlink" title="3. Mockplus"></a>3. <strong><a href="https://www.mockplus.com/">Mockplus</a></strong></h3><p>摹客（<u>Mockplus</u>）是成都摹客科技有限公司旗下设计协作品牌，专注于一站式的产品设计和协作平台，为产品开发团队提供全流程协作、高保真设计和设计规范管理支持。摹客可以自产出高保真设计，支持多款主流设计工具（Sketch/PS/XD/Axure等）的设计稿交付，团队成员在产品、设计到开发的各个工作环节，利用多种设计工具，都能使用摹客平台协同工作。</p>
+<h3 id="3-Mockplus"><a href="#3-Mockplus" class="headerlink" title="3. Mockplus"></a>3. <strong><a href="https://www.mockplus.com/">Mockplus</a></strong></h3><p>摹客（<code>&lt;u&gt;</code>Mockplus<code>&lt;/u&gt;</code>）是成都摹客科技有限公司旗下设计协作品牌，专注于一站式的产品设计和协作平台，为产品开发团队提供全流程协作、高保真设计和设计规范管理支持。摹客可以自产出高保真设计，支持多款主流设计工具（Sketch/PS/XD/Axure等）的设计稿交付，团队成员在产品、设计到开发的各个工作环节，利用多种设计工具，都能使用摹客平台协同工作。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">优点：</span><br><span class="line">    基础版免费使用，操作简单，上手快，交互简单，功能多样，组件资源丰富</span><br><span class="line">    预览方式和导出类型多样，支持团队协作</span><br><span class="line">缺点：</span><br><span class="line">    不支持手势交互，不支持鼠标悬停</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://i.loli.net/2021/05/30/VrGbTIO47RpcQ3L.png" alt="Mockplus"></p>
@@ -90,6 +84,7 @@
 ]]></content>
       <categories>
         <category>学习记录</category>
+        <category>软件工程</category>
       </categories>
       <tags>
         <tag>原型设计</tag>
