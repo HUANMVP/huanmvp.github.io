@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/01.png" color="#222">
+  <meta name="google-site-verification" content="07kJuiIow-b_-PNUQSqbqprQ-HLzQVrVsi_diQTNo-E">
+  <meta name="baidu-site-verification" content="code-lXygKxFeJK">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;huanmvp.top&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:true,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:true,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:true,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:&quot;livere&quot;,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null,&quot;activeClass&quot;:&quot;livere&quot;},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="什么是“原型”？我们经常在不同的背景里看到“原型”这个词。 由此，我们很可能已经混淆它的真正含义。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原型设计工具比较及实践">
+<meta property="og:url" content="https://huanmvp.top/post/202105301741/index.html">
+<meta property="og:site_name" content="HUANMVP">
+<meta property="og:description" content="什么是“原型”？我们经常在不同的背景里看到“原型”这个词。 由此，我们很可能已经混淆它的真正含义。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/05/30/h6swpqFbyovedLa.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/30/B5ir2RnGYJzqoQs.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/30/VrGbTIO47RpcQ3L.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/30/dmatwg5LUGIRirT.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/30/yV876BCbaIAQsJn.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/30/z4Lwnru5FcOAjtx.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/30/w8bPyOdv2ZA63xC.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/30/DeyYEzalP9HnN7W.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/30/PxFcqENZRweXS3o.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/30/qY58rWEahs2g6O1.png">
+<meta property="article:published_time" content="2021-05-30T09:41:19.000Z">
+<meta property="article:modified_time" content="2022-04-18T07:52:37.886Z">
+<meta property="article:author" content="huan">
+<meta property="article:tag" content="原型设计">
+<meta property="article:tag" content="原型设计工具比较">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/05/30/h6swpqFbyovedLa.png">
+
+
+<link rel="canonical" href="https://huanmvp.top/post/202105301741/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;huanmvp.top&#x2F;post&#x2F;202105301741&#x2F;&quot;,&quot;path&quot;:&quot;post&#x2F;202105301741&#x2F;&quot;,&quot;title&quot;:&quot;原型设计工具比较及实践&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>原型设计工具比较及实践 | HUANMVP</title>
+  
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?d353e30236c47ffa5978026ea86d6868"></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">HUANMVP</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">huan's site</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/About/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">5</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a></li>
+        <li class="menu-item menu-item-resource"><a href="/resource/" rel="section"><i class="fa fa-folder fa-fw"></i>好东西</a></li>
+        <li class="menu-item menu-item-guestbook"><a href="/guestbook/" rel="section"><i class="fa fa-comments fa-fw"></i>留言版</a></li>
+        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E2%80%9C%E5%8E%9F%E5%9E%8B%E2%80%9D%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">什么是“原型”？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7%EF%BC%9A%E5%A2%A8%E5%88%80%EF%BC%8CAxure%E5%8F%8AMockplus%E7%9A%84%E5%90%84%E8%87%AA%E7%9A%84%E9%80%82%E7%94%A8%E9%A2%86%E5%9F%9F%E5%8F%8A%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%A2%A8%E5%88%80"><span class="nav-number">2.1.</span> <span class="nav-text">1. 墨刀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Axure"><span class="nav-number">2.2.</span> <span class="nav-text">2. Axure</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Mockplus"><span class="nav-number">2.3.</span> <span class="nav-text">3. Mockplus</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-%E2%80%9C%E4%BF%9D%E7%9C%9F%E5%BA%A6%E2%80%9D-%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">什么是 “保真度” ？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E4%BD%8E%E4%BF%9D%E7%9C%9F%E5%8E%9F%E5%9E%8B%EF%BC%9F"><span class="nav-number">3.1.</span> <span class="nav-text">1. 什么是低保真原型？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BB%80%E4%B9%88%E6%98%AF%E9%AB%98%E4%BF%9D%E7%9C%9F%E5%8E%9F%E5%9E%8B%EF%BC%9F"><span class="nav-number">3.2.</span> <span class="nav-text">2. 什么是高保真原型？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1%E5%AE%9E%E8%B7%B5%EF%BC%9A%E4%BA%91%E9%9F%B3%E4%B9%90%EF%BC%88%E5%9F%BA%E4%BA%8E%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E4%BF%AE%E6%94%B9%E5%B9%B6%E8%AE%BE%E8%AE%A1%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">原型设计实践：云音乐（基于网易云音乐修改并设计）</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="huan"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">huan</p>
+  <div class="site-description" itemprop="description">贵在坚持，难在坚持，成在坚持</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0hVQU5NVlA=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;HUANMVP"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:huan@huanmvp.top" title="E-Mail → mailto:huan@huanmvp.top"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vcC8xMDA1MDU2MDg4NDQ1ODUx" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;p&#x2F;1005056088445851"><i class="fab fa-weibo fa-fw"></i>Weibo</span>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1IYW5z"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://huanmvp.top/post/202105301741/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="huan">
+      <meta itemprop="description" content="贵在坚持，难在坚持，成在坚持">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HUANMVP">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          原型设计工具比较及实践
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-30 17:41:19" itemprop="dateCreated datePublished" datetime="2021-05-30T17:41:19+08:00">2021-05-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-04-18 15:52:37" itemprop="dateModified" datetime="2022-04-18T15:52:37+08:00">2022-04-18</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" itemprop="url" rel="index"><span itemprop="name">学习记录</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">软件工程</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/post/202105301741/" class="post-meta-item leancloud_visitors" data-flag-title="原型设计工具比较及实践" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="什么是“原型”？"><a href="#什么是“原型”？" class="headerlink" title="什么是“原型”？"></a>什么是“原型”？</h2><p>我们经常在不同的背景里看到“原型”这个词。 由此，我们很可能已经混淆它的真正含义。</p>
+<span id="more"></span>
+
+<p>它最基本的含义：原型是设计想法的表达。原型让设计师们得以展现他们的设计，以及模拟真实的使用场景。在数字化的背景下，原型能够模拟用户与界面之间的最终交互行为。根据产品团队的需求，原型可以模拟整个app或仅单个交互行为。原型可以模拟最终产品的运作方式。它支持产品团队测试其设计的可用性和可行性。也有很多人将原型与草图，线框图和模型混淆，实际上它们不同于原型。“交互性”这个概念是原型的根本，因此这就是为什么草图，线框图和模型不能被视为“原型”的理由。</p>
+<h2 id="常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点"><a href="#常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点" class="headerlink" title="常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点"></a>常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点</h2><h3 id="1-墨刀"><a href="#1-墨刀" class="headerlink" title="1. 墨刀"></a>1. <strong><a href="modao.cc">墨刀</a></strong></h3><p><strong>墨刀</strong>是一款在线原型设计与协同工具，借助墨刀，产品经理、设计师、开发、销售、运营及创业者等用户群体，能够搭建为产品原型，演示项目效果。墨刀同时也是协作平台，项目成员可以协作编辑、审阅，不管是产品想法展示，还是向客户收集产品反馈，向投资人进行Demo展示，或是在团队内部协作沟通、项目管理。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">    内置丰富原型组件及页面的素材模式，支持超链接、设置字体</span><br><span class="line">    高度仿真，可快速测试UI元素和交互</span><br><span class="line">    无需开发，获取用户产品体验反馈</span><br><span class="line">    手机直接演示产品交互，感觉更直观</span><br><span class="line">    一键分享项目并选择能见页面和成员</span><br><span class="line">缺点：</span><br><span class="line">    必须在线使用，无法离线编辑和保存</span><br><span class="line">    免费版项目数量和页面数量有限（免费版最多可建3个项目，每个项目最多可以新建20个页面）</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/05/30/h6swpqFbyovedLa.png" alt="墨刀"></p>
+<h3 id="2-Axure"><a href="#2-Axure" class="headerlink" title="2. Axure"></a>2. <strong><span class="exturl" data-url="aHR0cHM6Ly93d3cuYXh1cmUuY29tLw==">Axure<i class="fa fa-external-link-alt"></i></span></strong></h3><p><strong>Axure</strong>是美国Axure Software Solution公司旗舰产品，是一个专业的快速原型设计工具，让负责定义需求和规格、设计功能和界面的专家能够快速创建应用软件或Web网站的线框图、流程图、原型和规格说明文档。作为专业的原型设计工具，它能快速、高效的创建原型，同时支持多人协作设计和版本控制管理。<br>Axure RP的使用者主要包括商业分析师、信息架构师、产品经理、IT咨询师、用户体验设计师、交互设计师、UI设计师等，另外，架构师、程序员也在使用Axure。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">    老牌原型设计工具，功能齐全，交互好，可实现任何常见的交互效果</span><br><span class="line">    项目共享，团队间同步工作，并保留工作历史</span><br><span class="line">    拥有强大的编辑功能，可自行制作素材库</span><br><span class="line">缺点：</span><br><span class="line">    功能太多，上手难度高</span><br><span class="line">    素材来源多为第三方，寻找不便</span><br><span class="line">    价格高，个人版每月 $29</span><br><span class="line">    软件为英文，需要英语好或者寻找汉化方法</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/05/30/B5ir2RnGYJzqoQs.png" alt="Axure"></p>
+<h3 id="3-Mockplus"><a href="#3-Mockplus" class="headerlink" title="3. Mockplus"></a>3. <strong><span class="exturl" data-url="aHR0cHM6Ly93d3cubW9ja3BsdXMuY29tLw==">Mockplus<i class="fa fa-external-link-alt"></i></span></strong></h3><p><strong>摹客</strong>是成都摹客科技有限公司旗下设计协作品牌，专注于一站式的产品设计和协作平台，为产品开发团队提供全流程协作、高保真设计和设计规范管理支持。摹客可以自产出高保真设计，支持多款主流设计工具（Sketch/PS/XD/Axure等）的设计稿交付，团队成员在产品、设计到开发的各个工作环节，利用多种设计工具，都能使用摹客平台协同工作。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">    基础版免费使用，操作简单，上手快，交互简单，功能多样，组件资源丰富</span><br><span class="line">    预览方式和导出类型多样，支持团队协作</span><br><span class="line">缺点：</span><br><span class="line">    不支持手势交互，不支持鼠标悬停</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/05/30/VrGbTIO47RpcQ3L.png" alt="Mockplus"></p>
+<h2 id="什么是-“保真度”-？"><a href="#什么是-“保真度”-？" class="headerlink" title="什么是 “保真度” ？"></a>什么是 “保真度” ？</h2><p>原型不一定要看起来像最终产品——它们可以有不同保真度。 原型的保真度指的是它如何传达最终产品的外观（也就是指它的细节和真实感级别）。<br>保真度可以在以下方面有所不同：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">视觉设计</span><br><span class="line">内容</span><br><span class="line">交互性</span><br></pre></td></tr></table></figure>
+
+<p>原型的类型有很多，基本介于这两种类型之间。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">低保真</span><br><span class="line">高保真</span><br></pre></td></tr></table></figure>
+
+<p>产品团队根据原型设计的目的、设计完整性和可用资源来选择原型的保真度。</p>
+<h3 id="1-什么是低保真原型？"><a href="#1-什么是低保真原型？" class="headerlink" title="1. 什么是低保真原型？"></a>1. 什么是<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kZXZlbG9wZXIvYXJ0aWNsZS8xODI3Njgx">低保真原型<i class="fa fa-external-link-alt"></i></span>？</h3><ul>
+<li><p>低保真原型是在纸上画的的草图或原型，也可以是在电脑上设计的产品页面。低保真原型的作用是表现产品中最重要的用户流程和功能所涉及的页面关系。</p>
+</li>
+<li><p>什么时候适合低保真原型？</p>
+<p>低保真原型适合快速的头脑风暴，并向客户、开发和项目参与者演示设计想法，适合将一些早期的用户测试集成到产品设计中。</p>
+</li>
+</ul>
+<h3 id="2-什么是高保真原型？"><a href="#2-什么是高保真原型？" class="headerlink" title="2. 什么是高保真原型？"></a>2. 什么是<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kZXZlbG9wZXIvYXJ0aWNsZS8xODI3Njgx">高保真原型<i class="fa fa-external-link-alt"></i></span>？</h3><ul>
+<li><p>高保真原型展示的细节比低保真更深入细致，高保真原型是尽可能接近最终产品的样式。高保真原型具有与低保真相同的流程和信息架构，也会展示更多的细节和页面关系。</p>
+</li>
+<li><p>什么时候使用高保真原型？</p>
+<p>基本功能实现是指流程和页面完成后，至少在核心功能需求方面满足了用户的基本目标。通过低保真我们会知道需要设计的页面原型，以及每个页面的基本布局，接下来就可以进行高保真的制作。</p>
+</li>
+</ul>
+<h2 id="原型设计实践：云音乐（基于网易云音乐修改并设计）"><a href="#原型设计实践：云音乐（基于网易云音乐修改并设计）" class="headerlink" title="原型设计实践：云音乐（基于网易云音乐修改并设计）"></a>原型设计实践：云音乐（基于<span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLw==">网易云音乐<i class="fa fa-external-link-alt"></i></span>修改并设计）</h2><ul>
+<li><p>主题：在线音乐软件</p>
+</li>
+<li><p>功能：在线听歌，音乐下载，音乐电台，MV，动态等</p>
+</li>
+<li><p>界面设计：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1. 首页</span><br></pre></td></tr></table></figure>
+<p>显示个性化推荐及常用功能的入口</p>
+<p><img src="https://i.loli.net/2021/05/30/dmatwg5LUGIRirT.png" alt="首页"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1. 我的音乐界面</span><br></pre></td></tr></table></figure>
+<p>本地音乐，喜欢的音乐，收藏的音乐、电台，下载管理等</p>
+<p><img src="https://i.loli.net/2021/05/30/yV876BCbaIAQsJn.png" alt="我的音乐"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3. 搜索界面</span><br></pre></td></tr></table></figure>
+<p>在线音乐软件的搜索功能，显示搜索记录及热门搜索</p>
+<p><img src="https://i.loli.net/2021/05/30/z4Lwnru5FcOAjtx.png" alt="搜索"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4. 播放界面</span><br></pre></td></tr></table></figure>
+<p>点击底部播放栏或直接点击歌曲，进入播放界面</p>
+<p><img src="https://i.loli.net/2021/05/30/w8bPyOdv2ZA63xC.png" alt="播放"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5. 视频动态界面</span><br></pre></td></tr></table></figure>
+<p>显示社区和好友动态，及动态相关的音乐和MV</p>
+<p><img src="https://i.loli.net/2021/05/30/DeyYEzalP9HnN7W.png" alt="动态"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6. 音乐榜单界面</span><br></pre></td></tr></table></figure>
+<p>分类显示飙升榜，热歌榜，新歌榜，歌手榜等榜单，持续更新</p>
+<p><img src="https://i.loli.net/2021/05/30/PxFcqENZRweXS3o.png" alt="榜单"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7. 个人信息及设置</span><br></pre></td></tr></table></figure>
+<p>显示个人信息和软件设置，包括好友信息，会员信息，听歌记录等功能</p>
+<p><img src="https://i.loli.net/2021/05/30/qY58rWEahs2g6O1.png" alt="个人信息"></p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>huan
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://huanmvp.top/post/202105301741/" title="原型设计工具比较及实践">https://huanmvp.top/post/202105301741/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1IYW5z"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1/" rel="tag"><i class="fa fa-tag"></i> 原型设计</a>
+              <a href="/tags/%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7%E6%AF%94%E8%BE%83/" rel="tag"><i class="fa fa-tag"></i> 原型设计工具比较</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/test/202106281536/" rel="next" title="测试">
+                  测试 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81MzU4My8zMDA1Ng=="></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">huan</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">3k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">3 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{&quot;enable&quot;:true,&quot;app_id&quot;:&quot;itOMDCEfK8haG0RJpVIR6pBr-MdYXbMMI&quot;,&quot;app_key&quot;:&quot;4TfgTpVgKzF5zbvdKJoyeKuk&quot;,&quot;server_url&quot;:null,&quot;security&quot;:false}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+<script src="/js/third-party/comments/livere.js"></script>
+
+</body>
+</html>

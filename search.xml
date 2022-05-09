@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>测试</title>
+    <url>/test/202106281536/</url>
+    <content><![CDATA[<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h2><h3 id="测试-2"><a href="#测试-2" class="headerlink" title="测试"></a>测试</h3><h4 id="测试-3"><a href="#测试-3" class="headerlink" title="测试"></a>测试</h4><h5 id="测试-4"><a href="#测试-4" class="headerlink" title="测试"></a>测试</h5><h6 id="测试-5"><a href="#测试-5" class="headerlink" title="测试"></a>测试</h6><hr>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,a);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReadTitle</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Document urlStr = getHtml(<span class="string">&quot;https://news.baidu.com/&quot;</span>);</span><br><span class="line">        getCategories(urlStr);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>测试</p>
+</blockquote>
+<p><em>测试</em></p>
+<p><strong>测试</strong></p>
+<p><code>int main()</code></p>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>内置Flash的Chrome浏览器</title>
+    <url>/post/202204181328/</url>
+    <content><![CDATA[<p>Chrome53，内置Flash22版本，应该是最后一个内置Flash插件的Chrome版本。</p>
+<p>自测4399小游戏可用，其他网站自测。网页字小缩放可以设置成125%或更大。</p>
+<p><img src="https://pic.dogimg.com/2022/04/18/625d1b4cbf2ba.png" alt="chrome"></p>
+<span id="more"></span>
+
+
+
+<p><img src="https://pic.dogimg.com/2022/04/18/625d1b4fb66bb.png" alt="4399"></p>
+<ul>
+<li>优点    </li>
+</ul>
+<ol>
+<li><p>自带Flash，虽然版本旧，但是功能依然可用</p>
+</li>
+<li><p>避免<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xMzA3MDM4NDg=">重橙<i class="fa fa-external-link-alt"></i></span><strong>特供版</strong>的广告弹窗</p>
+</li>
+<li><p>相对于支持Flash的旧版本浏览器来说，省去下载Flash的过程</p>
+</li>
+<li><p>与已安装版本不冲突</p>
+</li>
+</ol>
+<ul>
+<li>缺点</li>
+</ul>
+<ol>
+<li><p>Chrome版本旧，体验可能不如新版本</p>
+</li>
+<li><p>数据保存在Data目录下，不方便数据同步</p>
+</li>
+</ol>
+<hr>
+<p>习惯Chrome所以没有制作Firefox的，详细制作可参考<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20veGlhbmd5dWVjbi9wLzEwNTgzNzg4Lmh0bWw=">自己制作Chrome便携版实现多版本共存<i class="fa fa-external-link-alt"></i></span>，或自行百度教程，基本上都是类似的方法。</p>
+<p>点此下载<span class="exturl" data-url="aHR0cHM6Ly9odWFubXZwLmxhbnpvdWguY29tL2lTRExVMDNlODViYw==">Chrome53<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <categories>
+        <category>实用</category>
+      </categories>
+      <tags>
+        <tag>flash</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>原型设计工具比较及实践</title>
+    <url>/post/202105301741/</url>
+    <content><![CDATA[<h2 id="什么是“原型”？"><a href="#什么是“原型”？" class="headerlink" title="什么是“原型”？"></a>什么是“原型”？</h2><p>我们经常在不同的背景里看到“原型”这个词。 由此，我们很可能已经混淆它的真正含义。</p>
+<span id="more"></span>
+
+<p>它最基本的含义：原型是设计想法的表达。原型让设计师们得以展现他们的设计，以及模拟真实的使用场景。在数字化的背景下，原型能够模拟用户与界面之间的最终交互行为。根据产品团队的需求，原型可以模拟整个app或仅单个交互行为。原型可以模拟最终产品的运作方式。它支持产品团队测试其设计的可用性和可行性。也有很多人将原型与草图，线框图和模型混淆，实际上它们不同于原型。“交互性”这个概念是原型的根本，因此这就是为什么草图，线框图和模型不能被视为“原型”的理由。</p>
+<h2 id="常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点"><a href="#常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点" class="headerlink" title="常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点"></a>常用原型设计工具：墨刀，Axure及Mockplus的各自的适用领域及优缺点</h2><h3 id="1-墨刀"><a href="#1-墨刀" class="headerlink" title="1. 墨刀"></a>1. <strong><a href="modao.cc">墨刀</a></strong></h3><p><strong>墨刀</strong>是一款在线原型设计与协同工具，借助墨刀，产品经理、设计师、开发、销售、运营及创业者等用户群体，能够搭建为产品原型，演示项目效果。墨刀同时也是协作平台，项目成员可以协作编辑、审阅，不管是产品想法展示，还是向客户收集产品反馈，向投资人进行Demo展示，或是在团队内部协作沟通、项目管理。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">优点：</span><br><span class="line">    内置丰富原型组件及页面的素材模式，支持超链接、设置字体</span><br><span class="line">    高度仿真，可快速测试UI元素和交互</span><br><span class="line">    无需开发，获取用户产品体验反馈</span><br><span class="line">    手机直接演示产品交互，感觉更直观</span><br><span class="line">    一键分享项目并选择能见页面和成员</span><br><span class="line">缺点：</span><br><span class="line">    必须在线使用，无法离线编辑和保存</span><br><span class="line">    免费版项目数量和页面数量有限（免费版最多可建3个项目，每个项目最多可以新建20个页面）</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/05/30/h6swpqFbyovedLa.png" alt="墨刀"></p>
+<h3 id="2-Axure"><a href="#2-Axure" class="headerlink" title="2. Axure"></a>2. <strong><span class="exturl" data-url="aHR0cHM6Ly93d3cuYXh1cmUuY29tLw==">Axure<i class="fa fa-external-link-alt"></i></span></strong></h3><p><strong>Axure</strong>是美国Axure Software Solution公司旗舰产品，是一个专业的快速原型设计工具，让负责定义需求和规格、设计功能和界面的专家能够快速创建应用软件或Web网站的线框图、流程图、原型和规格说明文档。作为专业的原型设计工具，它能快速、高效的创建原型，同时支持多人协作设计和版本控制管理。<br>Axure RP的使用者主要包括商业分析师、信息架构师、产品经理、IT咨询师、用户体验设计师、交互设计师、UI设计师等，另外，架构师、程序员也在使用Axure。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">优点：</span><br><span class="line">    老牌原型设计工具，功能齐全，交互好，可实现任何常见的交互效果</span><br><span class="line">    项目共享，团队间同步工作，并保留工作历史</span><br><span class="line">    拥有强大的编辑功能，可自行制作素材库</span><br><span class="line">缺点：</span><br><span class="line">    功能太多，上手难度高</span><br><span class="line">    素材来源多为第三方，寻找不便</span><br><span class="line">    价格高，个人版每月 $29</span><br><span class="line">    软件为英文，需要英语好或者寻找汉化方法</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/05/30/B5ir2RnGYJzqoQs.png" alt="Axure"></p>
+<h3 id="3-Mockplus"><a href="#3-Mockplus" class="headerlink" title="3. Mockplus"></a>3. <strong><span class="exturl" data-url="aHR0cHM6Ly93d3cubW9ja3BsdXMuY29tLw==">Mockplus<i class="fa fa-external-link-alt"></i></span></strong></h3><p><strong>摹客</strong>是成都摹客科技有限公司旗下设计协作品牌，专注于一站式的产品设计和协作平台，为产品开发团队提供全流程协作、高保真设计和设计规范管理支持。摹客可以自产出高保真设计，支持多款主流设计工具（Sketch/PS/XD/Axure等）的设计稿交付，团队成员在产品、设计到开发的各个工作环节，利用多种设计工具，都能使用摹客平台协同工作。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">优点：</span><br><span class="line">    基础版免费使用，操作简单，上手快，交互简单，功能多样，组件资源丰富</span><br><span class="line">    预览方式和导出类型多样，支持团队协作</span><br><span class="line">缺点：</span><br><span class="line">    不支持手势交互，不支持鼠标悬停</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/05/30/VrGbTIO47RpcQ3L.png" alt="Mockplus"></p>
+<h2 id="什么是-“保真度”-？"><a href="#什么是-“保真度”-？" class="headerlink" title="什么是 “保真度” ？"></a>什么是 “保真度” ？</h2><p>原型不一定要看起来像最终产品——它们可以有不同保真度。 原型的保真度指的是它如何传达最终产品的外观（也就是指它的细节和真实感级别）。<br>保真度可以在以下方面有所不同：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">视觉设计</span><br><span class="line">内容</span><br><span class="line">交互性</span><br></pre></td></tr></table></figure>
+
+<p>原型的类型有很多，基本介于这两种类型之间。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">低保真</span><br><span class="line">高保真</span><br></pre></td></tr></table></figure>
+
+<p>产品团队根据原型设计的目的、设计完整性和可用资源来选择原型的保真度。</p>
+<h3 id="1-什么是低保真原型？"><a href="#1-什么是低保真原型？" class="headerlink" title="1. 什么是低保真原型？"></a>1. 什么是<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kZXZlbG9wZXIvYXJ0aWNsZS8xODI3Njgx">低保真原型<i class="fa fa-external-link-alt"></i></span>？</h3><ul>
+<li><p>低保真原型是在纸上画的的草图或原型，也可以是在电脑上设计的产品页面。低保真原型的作用是表现产品中最重要的用户流程和功能所涉及的页面关系。</p>
+</li>
+<li><p>什么时候适合低保真原型？</p>
+<p>低保真原型适合快速的头脑风暴，并向客户、开发和项目参与者演示设计想法，适合将一些早期的用户测试集成到产品设计中。</p>
+</li>
+</ul>
+<h3 id="2-什么是高保真原型？"><a href="#2-什么是高保真原型？" class="headerlink" title="2. 什么是高保真原型？"></a>2. 什么是<span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kZXZlbG9wZXIvYXJ0aWNsZS8xODI3Njgx">高保真原型<i class="fa fa-external-link-alt"></i></span>？</h3><ul>
+<li><p>高保真原型展示的细节比低保真更深入细致，高保真原型是尽可能接近最终产品的样式。高保真原型具有与低保真相同的流程和信息架构，也会展示更多的细节和页面关系。</p>
+</li>
+<li><p>什么时候使用高保真原型？</p>
+<p>基本功能实现是指流程和页面完成后，至少在核心功能需求方面满足了用户的基本目标。通过低保真我们会知道需要设计的页面原型，以及每个页面的基本布局，接下来就可以进行高保真的制作。</p>
+</li>
+</ul>
+<h2 id="原型设计实践：云音乐（基于网易云音乐修改并设计）"><a href="#原型设计实践：云音乐（基于网易云音乐修改并设计）" class="headerlink" title="原型设计实践：云音乐（基于网易云音乐修改并设计）"></a>原型设计实践：云音乐（基于<span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLw==">网易云音乐<i class="fa fa-external-link-alt"></i></span>修改并设计）</h2><ul>
+<li><p>主题：在线音乐软件</p>
+</li>
+<li><p>功能：在线听歌，音乐下载，音乐电台，MV，动态等</p>
+</li>
+<li><p>界面设计：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 首页</span><br></pre></td></tr></table></figure>
+<p>显示个性化推荐及常用功能的入口</p>
+<p><img src="https://i.loli.net/2021/05/30/dmatwg5LUGIRirT.png" alt="首页"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 我的音乐界面</span><br></pre></td></tr></table></figure>
+<p>本地音乐，喜欢的音乐，收藏的音乐、电台，下载管理等</p>
+<p><img src="https://i.loli.net/2021/05/30/yV876BCbaIAQsJn.png" alt="我的音乐"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3. 搜索界面</span><br></pre></td></tr></table></figure>
+<p>在线音乐软件的搜索功能，显示搜索记录及热门搜索</p>
+<p><img src="https://i.loli.net/2021/05/30/z4Lwnru5FcOAjtx.png" alt="搜索"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">4. 播放界面</span><br></pre></td></tr></table></figure>
+<p>点击底部播放栏或直接点击歌曲，进入播放界面</p>
+<p><img src="https://i.loli.net/2021/05/30/w8bPyOdv2ZA63xC.png" alt="播放"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">5. 视频动态界面</span><br></pre></td></tr></table></figure>
+<p>显示社区和好友动态，及动态相关的音乐和MV</p>
+<p><img src="https://i.loli.net/2021/05/30/DeyYEzalP9HnN7W.png" alt="动态"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">6. 音乐榜单界面</span><br></pre></td></tr></table></figure>
+<p>分类显示飙升榜，热歌榜，新歌榜，歌手榜等榜单，持续更新</p>
+<p><img src="https://i.loli.net/2021/05/30/PxFcqENZRweXS3o.png" alt="榜单"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">7. 个人信息及设置</span><br></pre></td></tr></table></figure>
+<p>显示个人信息和软件设置，包括好友信息，会员信息，听歌记录等功能</p>
+<p><img src="https://i.loli.net/2021/05/30/qY58rWEahs2g6O1.png" alt="个人信息"></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>学习记录</category>
+        <category>软件工程</category>
+      </categories>
+      <tags>
+        <tag>原型设计</tag>
+        <tag>原型设计工具比较</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>鼠标双击测试</title>
+    <url>/post/202110182032/</url>
+    <content><![CDATA[<h2 id="众所周知，罗技使用一段时间后容易出现双击的情况，尤其是在刚一年或者两年的时候，无论对于工作还是学习，都会造成不少的困扰😓；那么，怎么样来快速简单的测试鼠标到底是不是双击呢？下面是本人收集的一些用于测试的网站。"><a href="#众所周知，罗技使用一段时间后容易出现双击的情况，尤其是在刚一年或者两年的时候，无论对于工作还是学习，都会造成不少的困扰😓；那么，怎么样来快速简单的测试鼠标到底是不是双击呢？下面是本人收集的一些用于测试的网站。" class="headerlink" title="众所周知，罗技使用一段时间后容易出现双击的情况，尤其是在刚一年或者两年的时候，无论对于工作还是学习，都会造成不少的困扰😓；那么，怎么样来快速简单的测试鼠标到底是不是双击呢？下面是本人收集的一些用于测试的网站。"></a>众所周知，罗技使用一段时间后容易出现双击的情况，尤其是在刚一年或者两年的时候，无论对于工作还是学习，都会造成不少的困扰😓；那么，怎么样来快速简单的测试鼠标到底是不是双击呢？下面是本人收集的一些用于测试的网站。</h2><p>鼠标双击测试网站：点击<span class="exturl" data-url="aHR0cHM6Ly9jcHMtY2hlY2suY29tL2NuL2RvdWJsZS1jbGljay10ZXN0">这里<i class="fa fa-external-link-alt"></i></span>进入，网站也有其他的测试项目可供选择测试</p>
+<p>还有一种鼠标双击测试，在bilibili看到的，网址：<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3JlYWQvY3Y3NzIyMzc1">https://www.bilibili.com/read/cv7722375<i class="fa fa-external-link-alt"></i></span></p>
+<p>最后，附上罗技售后网点：<span class="exturl" data-url="aHR0cHM6Ly9zdG9yZS5sb2dpdGVjaC5jb20uY24vaGVscC9MZ0JyYW5jaGVz">https://store.logitech.com.cn/help/LgBranches<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <categories>
+        <category>实用</category>
+      </categories>
+      <tags>
+        <tag>鼠标</tag>
+      </tags>
+  </entry>
+</search>
