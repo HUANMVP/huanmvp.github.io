@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>测试</title>
-    <url>/test/202106281536/</url>
+    <url>/test/20210628/</url>
     <content><![CDATA[<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><h2 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h2><h3 id="测试-2"><a href="#测试-2" class="headerlink" title="测试"></a>测试</h3><h4 id="测试-3"><a href="#测试-3" class="headerlink" title="测试"></a>测试</h4><h5 id="测试-4"><a href="#测试-4" class="headerlink" title="测试"></a>测试</h5><h6 id="测试-5"><a href="#测试-5" class="headerlink" title="测试"></a>测试</h6><hr>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,a);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -23,52 +23,8 @@
       </tags>
   </entry>
   <entry>
-    <title>内置Flash的Chrome浏览器</title>
-    <url>/post/202204181328/</url>
-    <content><![CDATA[<p>Chrome53，内置Flash22版本，应该是最后一个内置Flash插件的Chrome版本。</p>
-<p>自测4399小游戏可用，其他网站自测。网页字小缩放可以设置成125%或更大。</p>
-<p><img src="https://pic.dogimg.com/2022/04/18/625d1b4cbf2ba.png" alt="chrome"></p>
-<span id="more"></span>
-
-
-
-<p><img src="https://pic.dogimg.com/2022/04/18/625d1b4fb66bb.png" alt="4399"></p>
-<ul>
-<li>优点    </li>
-</ul>
-<ol>
-<li><p>自带Flash，虽然版本旧，但是功能依然可用</p>
-</li>
-<li><p>避免<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xMzA3MDM4NDg=">重橙<i class="fa fa-external-link-alt"></i></span><strong>特供版</strong>的广告弹窗</p>
-</li>
-<li><p>相对于支持Flash的旧版本浏览器来说，省去下载Flash的过程</p>
-</li>
-<li><p>与已安装版本不冲突</p>
-</li>
-</ol>
-<ul>
-<li>缺点</li>
-</ul>
-<ol>
-<li><p>Chrome版本旧，体验可能不如新版本</p>
-</li>
-<li><p>数据保存在Data目录下，不方便数据同步</p>
-</li>
-</ol>
-<hr>
-<p>习惯Chrome所以没有制作Firefox的，详细制作可参考<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20veGlhbmd5dWVjbi9wLzEwNTgzNzg4Lmh0bWw=">自己制作Chrome便携版实现多版本共存<i class="fa fa-external-link-alt"></i></span>，或自行百度教程，基本上都是类似的方法。</p>
-<p>点此下载<span class="exturl" data-url="aHR0cHM6Ly9odWFubXZwLmxhbnpvdWguY29tL2lTRExVMDNlODViYw==">Chrome53<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-      <categories>
-        <category>实用</category>
-      </categories>
-      <tags>
-        <tag>flash</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>原型设计工具比较及实践</title>
-    <url>/post/202105301741/</url>
+    <url>/p/20210530/</url>
     <content><![CDATA[<h2 id="什么是“原型”？"><a href="#什么是“原型”？" class="headerlink" title="什么是“原型”？"></a>什么是“原型”？</h2><p>我们经常在不同的背景里看到“原型”这个词。 由此，我们很可能已经混淆它的真正含义。</p>
 <span id="more"></span>
 
@@ -137,8 +93,7 @@
 </ul>
 ]]></content>
       <categories>
-        <category>学习记录</category>
-        <category>软件工程</category>
+        <category>学习</category>
       </categories>
       <tags>
         <tag>原型设计</tag>
@@ -147,7 +102,7 @@
   </entry>
   <entry>
     <title>鼠标双击测试</title>
-    <url>/post/202110182032/</url>
+    <url>/p/20211018/</url>
     <content><![CDATA[<h2 id="众所周知，罗技使用一段时间后容易出现双击的情况，尤其是在刚一年或者两年的时候，无论对于工作还是学习，都会造成不少的困扰😓；那么，怎么样来快速简单的测试鼠标到底是不是双击呢？下面是本人收集的一些用于测试的网站。"><a href="#众所周知，罗技使用一段时间后容易出现双击的情况，尤其是在刚一年或者两年的时候，无论对于工作还是学习，都会造成不少的困扰😓；那么，怎么样来快速简单的测试鼠标到底是不是双击呢？下面是本人收集的一些用于测试的网站。" class="headerlink" title="众所周知，罗技使用一段时间后容易出现双击的情况，尤其是在刚一年或者两年的时候，无论对于工作还是学习，都会造成不少的困扰😓；那么，怎么样来快速简单的测试鼠标到底是不是双击呢？下面是本人收集的一些用于测试的网站。"></a>众所周知，罗技使用一段时间后容易出现双击的情况，尤其是在刚一年或者两年的时候，无论对于工作还是学习，都会造成不少的困扰😓；那么，怎么样来快速简单的测试鼠标到底是不是双击呢？下面是本人收集的一些用于测试的网站。</h2><p>鼠标双击测试网站：点击<span class="exturl" data-url="aHR0cHM6Ly9jcHMtY2hlY2suY29tL2NuL2RvdWJsZS1jbGljay10ZXN0">这里<i class="fa fa-external-link-alt"></i></span>进入，网站也有其他的测试项目可供选择测试</p>
 <p>还有一种鼠标双击测试，在bilibili看到的，网址：<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3JlYWQvY3Y3NzIyMzc1">https://www.bilibili.com/read/cv7722375<i class="fa fa-external-link-alt"></i></span></p>
 <p>最后，附上罗技售后网点：<span class="exturl" data-url="aHR0cHM6Ly9zdG9yZS5sb2dpdGVjaC5jb20uY24vaGVscC9MZ0JyYW5jaGVz">https://store.logitech.com.cn/help/LgBranches<i class="fa fa-external-link-alt"></i></span></p>
@@ -157,6 +112,88 @@
       </categories>
       <tags>
         <tag>鼠标</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2022年浏览器使用Flash的两种方法</title>
+    <url>/p/20220418/</url>
+    <content><![CDATA[<p>  Adobe公司的flash早已被淘汰，但是某橙特供版还在更新，目前为34，but弹窗泛滥，所以这也是你为什么会来到这的原因。</p>
+<span id="more"></span>
+
+<h2 id="方法一：使用自带Flash的浏览器"><a href="#方法一：使用自带Flash的浏览器" class="headerlink" title="方法一：使用自带Flash的浏览器"></a>方法一：使用自带Flash的浏览器</h2><p>（tips：下载地址在文章末尾）</p>
+<p><code>由于早期的chrome和Firefox自带flash插件，不需要额外下载flash插件，所以我们可以下载旧版本浏览器来达到使用flash的目的。在网上查找得知，chrome53是最后一个内置flash的版本(flash版本22)，chrome68是最后一个默认允许运行flash的版本，chrome88开始禁用flash；Firefox可自行查找.</code></p>
+<p><img src="/images/postimages/1663764973007.webp" alt="chrome://flash"></p>
+<p><img src="/images/postimages/1663764984138.webp" alt="4399"></p>
+<ul>
+<li>优点    </li>
+</ul>
+<ol>
+<li><p>自带Flash，虽然版本旧，但是功能依然可用</p>
+</li>
+<li><p>避免<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xMzA3MDM4NDg=">重橙<i class="fa fa-external-link-alt"></i></span><strong>特供版</strong>的广告弹窗</p>
+</li>
+<li><p>相对于支持Flash的旧版本浏览器来说，省去下载Flash的过程</p>
+</li>
+<li><p>与已安装版本不冲突</p>
+</li>
+</ol>
+<ul>
+<li>缺点</li>
+</ul>
+<ol>
+<li><p>Chrome版本旧，体验可能不如新版本</p>
+</li>
+<li><p>数据保存在Data目录下，不方便数据同步</p>
+</li>
+</ol>
+<p>习惯Chrome所以没有制作Firefox的，详细制作可参考<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20veGlhbmd5dWVjbi9wLzEwNTgzNzg4Lmh0bWw=">自己制作Chrome便携版实现多版本共存<i class="fa fa-external-link-alt"></i></span>，或自行百度教程，基本上都是类似的方法。</p>
+<hr>
+<h2 id="方法二：安装Flash-Player，并使用支持Flash的浏览器"><a href="#方法二：安装Flash-Player，并使用支持Flash的浏览器" class="headerlink" title="方法二：安装Flash Player，并使用支持Flash的浏览器"></a>方法二：安装Flash Player，并使用支持Flash的浏览器</h2><p><code>Tips：安装Flash前，电脑中如果已经安装了其他版本Flash，先使用“Adobe_Flash_Player一剑全清__V4.exe”清除电脑上的Flash，重启电脑后，再安装Flash。</code></p>
+<ol>
+<li>安装Falsh（注：安装Clean Flash Player需要 .NET 4.0）。</li>
+</ol>
+<p>点击 CleanFlash-34.0.0.192_Installer .exe ，勾选，点击AGREE<br><img src="/images/postimages/1663765178540.webp"></p>
+<p>选择需要安装的类型（Chrome需要勾选ppapi，Firefox需要勾选npapi，IE需要勾选ActiveX），默认全部勾选，点击下一步 NEXT<br><img src="images/postimages/1663765188516.webp"></p>
+<p>这里是安装独立的Flash Player，就是本地播放Flash文件的应用，看个人需求，然后点击NEXT完成安装</p>
+<p><img src="images/postimages/1663765192438.webp"></p>
+<ol start="2">
+<li>浏览器。上面介绍过，自Chrome 88起禁用Flash，所以可以使用低于88的版本，例如Chrome 87。这里提供两种版本，一个是离线安装版，一个是便携版。如果你正在使用Chrome并且版本高于87，建议使用便携版；如果你没有使用Chrome，安装版和便携版均可。</li>
+</ol>
+<p>相关文件下载：<br>Chrome 53下载链接：<span class="exturl" data-url="aHR0cHM6Ly9odWFubXZwLmxhbnpvdXYuY29tL2lpMGNoMGJseHlxYg==">https://huanmvp.lanzouv.com/ii0ch0blxyqb<i class="fa fa-external-link-alt"></i></span><br>Chrome 87下载地址：<span class="exturl" data-url="aHR0cHM6Ly9odWFubXZwLmxhbnpvdXYuY29tL2IwZXk1Nm1zZg==">https://huanmvp.lanzouv.com/b0ey56msf<i class="fa fa-external-link-alt"></i></span> 密码:gy2g</p>
+]]></content>
+      <categories>
+        <category>实用</category>
+      </categories>
+      <tags>
+        <tag>flash</tag>
+        <tag>4399</tag>
+        <tag>chrome</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows窗口频繁失去焦点（有其他窗口弹出并迅速消失）</title>
+    <url>/p/20221210/</url>
+    <content><![CDATA[<p>事情起因是我在5e平台玩CSGO，然后玩着玩着突然会切换到桌面，游戏是全屏1440*1280，桌面是1920*1080。</p>
+<span id="more"></span>
+
+<p>起初，我以为是平台问题，因为在玩完美或者官匹时不会出现，玩5e有概率出现，比如昨天没问题今天就有问题，或者今天没问题明天有问题。</p>
+<ul>
+<li>在网上查询5e闪退桌面或者5e切桌面并没有相关问题，所以排除了5e的问题。</li>
+<li>键盘拔下后，还是会出现问题，排除键盘轴体问题。</li>
+<li>电脑没有设置过定制任务、计划任务，排除计划任务的问题。</li>
+<li>电脑使用的dolby音效（游戏），插有线耳机时，偶尔会和平时声音不一样，打开Dolby Audio后出现下图情况，<br><img src="/images/postimages/1670684297718.png"><br>也没在意，就重启了电脑，然后继续游戏发现声音恢复了。</li>
+</ul>
+<p>过了几天，玩着玩着又切桌面了，实在是受不了了，观察下任务管理器没发现什么异常，看任务栏发现每隔一小会就会出现一个程序然后突然消失，于是在网上查找win10窗口弹出并迅速消失，找到了知乎的这篇文章 “ <strong><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8yNzMxNTE2Mw==">Windows 10 瞬闪窗口事件对应始末<i class="fa fa-external-link-alt"></i></span></strong> ”，顺着知乎的这篇文章，找到了NGA的一篇文章” <strong><span class="exturl" data-url="aHR0cHM6Ly9iYnMubmdhLmNuL3JlYWQucGhwP3RpZD02OTk3NzUyJnJhbmQ9Njg5">一个解决游戏突然弹回桌面/失去焦点/闪屏的小工具，含源代码<i class="fa fa-external-link-alt"></i></span></strong> “。运行文中的代码，每切换一个窗口会显示一行新的信息，由此可以知道是哪个程序频繁弹窗并迅速消失。运行代码后输出下图所示信息，<img src="/images/postimages/1670684327305.jpg">可以断定问题出现在dolbyaposvc这。继续在网上查找，找到微软社区一个关于dolbyaposvc的问题“ <strong><span class="exturl" data-url="aHR0cHM6Ly9hbnN3ZXJzLm1pY3Jvc29mdC5jb20vZW4tdXMvd2luZG93cy9mb3J1bS9hbGwvc3lzdGVtLTMyLXBvcHVwLXN5c3RlbTMyLWRvbGJ5YXBvc3ZjLXVzdWFsbHkvYzIwZGQzZTEtYzU2YS00OTU2LThlNTEtN2E5NTFmYjU5YzE1">System 32 popup, system32 dolbyaposvc, usually around sometime of reopening laptop<i class="fa fa-external-link-alt"></i></span></strong> ”。微软独立顾问回答如下“ <em><strong>It appears that your sound card driver is triggering the same(Dolby SVC driver)</strong></em> ”，应该是和声卡驱动有关，重装声卡驱动后问题解决。</p>
+<p>附上涉及到的代码(转自<span class="exturl" data-url="aHR0cHM6Ly9iYnMubmdhLmNuL3JlYWQucGhwP3RpZD02OTk3NzUyJnJhbmQ9Njg5">bbs.nga.cn<i class="fa fa-external-link-alt"></i></span>),由于原作者下载链接已经404，所以提供编译好的exe文件，或者使用下面代码自行编译运行。<br>下载链接：<span class="exturl" data-url="aHR0cHM6Ly9wYW4uaHVhbm12cC50b3A6ODAwL2QvT25lRHJpdmUvJUU4JUJEJUFGJUU0JUJCJUI2L1dpbmRvd3Mvd2hvYXJleW91LmV4ZQ==">whoareyou.exe<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;wchar.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Psapi.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> comment(lib, <span class="meta-string">&quot;Psapi.lib&quot;</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    HWND last_fore = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">wchar_t</span> name[MAX_PATH];</span><br><span class="line">    DWORD size = MAX_PATH;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(<span class="literal">true</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        HWND fore = GetForegroundWindow();</span><br><span class="line">        <span class="keyword">if</span> (fore != last_fore)</span><br><span class="line">        &#123;</span><br><span class="line">            last_fore = fore;</span><br><span class="line"></span><br><span class="line">            DWORD processid;</span><br><span class="line">            GetWindowThreadProcessId(fore, &amp;processid);</span><br><span class="line"></span><br><span class="line">            HANDLE process = OpenProcess(PROCESS_QUERY_INFORMATION, <span class="literal">NULL</span>, processid);</span><br><span class="line"></span><br><span class="line">            GetProcessImageFileNameW(process, name, size);</span><br><span class="line"></span><br><span class="line">            wprintf(<span class="string">L&quot;%s\n&quot;</span>, name);</span><br><span class="line">        &#125;</span><br><span class="line">        Sleep(<span class="number">10</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>实用</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>驱动</tag>
       </tags>
   </entry>
 </search>

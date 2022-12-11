@@ -2,7 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://huanmvp.top/test/202106281536/</loc>
+    <loc>https://huanmvp.top/p/20221210/</loc>
+    
+    <lastmod>2022-12-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huanmvp.top/p/20210530/</loc>
+    
+    <lastmod>2022-12-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huanmvp.top/p/20220418/</loc>
+    
+    <lastmod>2022-12-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huanmvp.top/test/20210628/</loc>
     
     <lastmod>2022-05-09</lastmod>
     
@@ -47,25 +74,7 @@
   </url>
   
   <url>
-    <loc>https://huanmvp.top/post/202204181328/</loc>
-    
-    <lastmod>2022-04-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huanmvp.top/post/202105301741/</loc>
-    
-    <lastmod>2022-04-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huanmvp.top/post/202110182032/</loc>
+    <loc>https://huanmvp.top/p/20211018/</loc>
     
     <lastmod>2021-10-18</lastmod>
     
@@ -94,7 +103,7 @@
 
   <url>
     <loc>https://huanmvp.top/</loc>
-    <lastmod>2022-05-27</lastmod>
+    <lastmod>2022-12-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -102,35 +111,63 @@
   
   <url>
     <loc>https://huanmvp.top/tags/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2022-05-27</lastmod>
+    <lastmod>2022-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huanmvp.top/tags/flash/</loc>
-    <lastmod>2022-05-27</lastmod>
+    <lastmod>2022-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huanmvp.top/tags/%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1/</loc>
-    <lastmod>2022-05-27</lastmod>
+    <lastmod>2022-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huanmvp.top/tags/%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7%E6%AF%94%E8%BE%83/</loc>
-    <lastmod>2022-05-27</lastmod>
+    <lastmod>2022-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huanmvp.top/tags/%E9%BC%A0%E6%A0%87/</loc>
-    <lastmod>2022-05-27</lastmod>
+    <lastmod>2022-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huanmvp.top/tags/4399/</loc>
+    <lastmod>2022-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huanmvp.top/tags/chrome/</loc>
+    <lastmod>2022-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huanmvp.top/tags/Windows/</loc>
+    <lastmod>2022-12-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://huanmvp.top/tags/%E9%A9%B1%E5%8A%A8/</loc>
+    <lastmod>2022-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -139,28 +176,21 @@
   
   <url>
     <loc>https://huanmvp.top/categories/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2022-05-27</lastmod>
+    <lastmod>2022-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://huanmvp.top/categories/%E5%AE%9E%E7%94%A8/</loc>
-    <lastmod>2022-05-27</lastmod>
+    <lastmod>2022-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://huanmvp.top/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2022-05-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://huanmvp.top/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</loc>
-    <lastmod>2022-05-27</lastmod>
+    <loc>https://huanmvp.top/categories/%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2022-12-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
