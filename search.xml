@@ -153,9 +153,9 @@
 <li>安装Falsh（注：安装Clean Flash Player需要 .NET 4.0）。</li>
 </ol>
 <p>点击 CleanFlash-34.0.0.192_Installer .exe ，勾选，点击AGREE<br><img src="/images/postimages/1663765178540.webp"></p>
-<p>选择需要安装的类型（Chrome需要勾选ppapi，Firefox需要勾选npapi，IE需要勾选ActiveX），默认全部勾选，点击下一步 NEXT<br><img src="images/postimages/1663765188516.webp"></p>
+<p>选择需要安装的类型（Chrome需要勾选ppapi，Firefox需要勾选npapi，IE需要勾选ActiveX），默认全部勾选，点击下一步 NEXT<br><img src="/images/postimages/1663765188516.webp"></p>
 <p>这里是安装独立的Flash Player，就是本地播放Flash文件的应用，看个人需求，然后点击NEXT完成安装</p>
-<p><img src="images/postimages/1663765192438.webp"></p>
+<p><img src="/images/postimages/1663765192438.webp"></p>
 <ol start="2">
 <li>浏览器。上面介绍过，自Chrome 88起禁用Flash，所以可以使用低于88的版本，例如Chrome 87。这里提供两种版本，一个是离线安装版，一个是便携版。如果你正在使用Chrome并且版本高于87，建议使用便携版；如果你没有使用Chrome，安装版和便携版均可。</li>
 </ol>
